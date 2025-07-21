@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX4</title>
+</head>
+<body>
+  <a href="#" onclick="showAlert()">Show Alert!</a><br>
+  <a href="#" onclick="showPrompt()">Show Prompt!</a><br>
+  <a href="#" onclick="showConfirm()">Show Confirm!</a><br>
+
+
+
+  <script type="text/javascript">
+    function showAlert(){
+      alert("This is an alert box!");
+    }
+
+    function showPrompt(){
+      let name = prompt("What's your name?")
+      alert("Hello " + name + "!");
+    }
+
+    function showConfirm(){
+      let result = confirm("Do you want to continue?");
+
+      if(result == true){
+        alert("The user wants to continue");
+      }else{
+        alert("The user cancelled the action");
+      }
+    }
+  </script>
+</body>
+</html>

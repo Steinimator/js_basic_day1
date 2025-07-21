@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chapter 5 - EX 1</title>
+    </head>
+<body>
+    <p>First paragraph - text will not show </p>
+    <p>Second paragraph - text will not show </p>
+    <p>Third paragraph - text will not show </p>
+
+    <script>
+
+    // get all <p> elements
+    let paragraphs = document.getElementsByTagName("p");
+
+    // loop through all items
+    for (let i = 0; i < paragraphs.length; i++) {
+        // Change display text
+        paragraphs[i].textContent = "Changed JavaScript paragraph number " + (i + 1);
+    }
+    
+    </script>
+
+  </body>
+</html>

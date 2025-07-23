@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EX7</title>
+</head>
+<body>
+    <h1>Check if it's party time</h1>
+    <p>Enter a date:</p>
+    <input type="date" id="partyDate" />
+
+    <p>Enter hour (0-23):</p>
+    <input type="number" id="partyTime" min="0" max="23" />
+
+    <button onclick="checkPartyTime()">Check</button>
+
+    <div id="result"></div>
+
+    <script>
+        function checkPartyTime() {
+            const dateStr = document.getElementById("partyDate").value;
+            const hourStr = document.getElementById("partyTime").value;
+
+        if (!dateStr) {
+            document.getElementById("result").textContent = "Please enter a date.";
+            return;
+        }
+
+        const date = new Date(dateStr);
+        if (isNaN(date)) {
+            document.getElementById("result").textContent = "Invalid date.";
+            return;
+        }
+
+        const hour = parseInt(hourStr, 10);
+        if (isNaN(hour) || hour < 0 || hour > 23) {
+            document.getElementById("result").textContent = "Enter a valid hour (0-23).";
+            return;
+        }
+
+        const day = date.toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
+        let message = "";
+
+        switch(day) {
+            case "monday":
+            case "tuesday":
+            case "wednesday":
+            case "thursday":
+            case "friday":
+                if (hour >= 17) {
+                    message = "One drink allowed after 17:00.";
+                } else {
+                    message = "No partying on workdays before 17:00.";
+                }
+                break;
+            case "saturday":
+            case "sunday":
+                message = "PARTY TIIIME! :D";
+                break;
+            default:
+                message = "Something went wrong.";
+      }
+
+
+      document.getElementById("result").textContent = message;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 6</title>
+    <style>
+        .text-danger {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Insurance Calculator</h1>
+    <p>Enter the age of your car in years:</p>
+    
+    <input type="number" id="carAge">
+    <p>Enter the price of your car:</p>
+    <input type="number" id="carPrice">
+    <br>
+    <br>
+    
+    <button onclick="calculateInsurance()">Calculate the insurance price</button>
+
+    
+    <div id="result"></div>
+
+    <script type="text/javascript">
+        function calculateInsurance() {
+            const result = document.getElementById("result");
+            //resettting className for validation
+            result.className = ""; 
+
+            try {
+                let carAge = parseInt(document.getElementById("carAge").value);
+                let carPrice = parseInt(document.getElementById("carPrice").value);
+                let basePrice = 600;
+                let yearlyIncrease = 50;
+
+                if (isNaN(carAge)) {
+                    throw new Error("Please enter a valid age for the car.");
+                }else if (carAge < 0) {
+                    throw new Error("A car cannot have a negative age.");
+                }else if (carAge > 150) {
+                    throw new Error("A car over 150 years old is not insurable.");
+                }
+
+                if (isNaN(carPrice)){
+                    throw new Error("Please enter a valid price for the car.");
+                }else if (carPrice < 0) {
+                    throw new Error("A car cannot have a negative price.");
+                }else if (carPrice > 1000000) {
+                    throw new Error("We do not insure cars over 1.000.000€ in price.");
+                }
+
+                let additionalPayment = carAge * yearlyIncrease + (carPrice/carAge/100);
+
+                let insurancePrice = basePrice + additionalPayment;
+                insurancePrice = Math.max(insurancePrice, 200); // Minimum price
+
+                result.textContent = `Estimation of insurance price: ${insurancePrice} €`;
+
+            } catch (error) {
+                result.textContent = error.message;
+                result.className = "text-danger";
+            }
+        }
+    </script>
+</body>
+</html>

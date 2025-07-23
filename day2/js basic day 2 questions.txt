@@ -1,0 +1,30 @@
+chapter 6:
+What different ways of outputting information have we learned?
+console.log() - write to browser console
+alert() - pop up to give message
+document.write() - writes directly into the webpage. Good for quick testing
+writing into html element - document.getElementById("elementId").innerHTML
+
+Name a use-case in which you would use a try...catch statement?
+When executing code that might fail due to user input errors (e.g., parsing a number where the user might enter a non-numeric string).
+When calling external APIs or resources that might not be available or could return errors.
+When performing operations that could cause syntax or runtime errors that you want to catch and respond to without breaking the entire program.
+
+
+
+
+
+
+
+
+chapter 7:
+when is it better to use the if & else conditions? 
+.) checking conditions that involve ranges, comparisons and complex logic, like value1 > 100 or x == y
+.) there are limited outcomes
+.) coniditons require non equal check like >=, <= or combiantions of conditions
+
+when is a switch preferable?
+.) comparing one single variable expression against many possible exact values (like strings, numbers, etc.)
+.) clearer and more organized structure than multiple if-else statements
+.) every comparison is based on equality checks --> for example: switch(grade){case 'A', case 'A+',...}
+

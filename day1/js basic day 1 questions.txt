@@ -1,0 +1,127 @@
+Questions:
+
+Chapter 1:
+What is JavaScript?
+JavaScript is a programming language used to make web pages interactive. It runs in the browser and can change the content, style, and behavior of websites.
+
+What types of data can JavaScript work with?
+numbers - 5,3, 1.12
+string ("hello")
+booleans - ture/false switches
+Arrays - list of values like names
+objects - Collection of values
+null/NaN - empty values
+undefined - no value yet
+
+How can we store data in JavaScript?
+Inside the <script> tag within the HTML file
+Using an external .js file linked with <script src="filename.js"></script>
+
+How and why do we use comments?
+Comments are notes in the code that the computer ignores.
+They help explain what the code does for humans reading it.
+Use comments to make your code easier to understand and maintain.
+
+
+
+
+
+
+
+
+Chapter 2:
+What is an Array?
+An array is a list-like structure that can store multiple values in one variable.
+
+What is the difference between a single-dimensional array and a two-dimensional array?
+A single-dimensional array is like a simple list of values.
+A two-dimensional array is like a table with rows and columns (an array of arrays).
+
+Which operators does JavaScript provide to mathematically operate with numbers?
+Addition (+)
+Subtraction (-)
+Multiplication (*)
+Division (/)
+Modulo (%)
+Exponentiation (**)
+Increment (++)
+Decrement (--)
+
+What operators do we know that allow us logical comparisons and combinations?
+Comparison operators: ==, ===, !=, !==, >, <, >=, <=.
+Logical operators: && (and), || (or), ! (not).
+
+What is returned when you try to run "2" + 2 and why?
+It returns "22" because the + operator joins a string with a number by converting the number to a string (string concatenation).
+
+
+
+
+
+
+
+
+Chapter 3:
+What can you do with Functions in JavaScript?
+Group code
+reuse code multiple times
+make it simpler
+accept Parameters
+return result using the return function
+
+What is the difference between Global and Local variables?
+Global variables are created outside functions and can be used anywhere in the code
+Local variables are created inside functions and only work inside those functions
+
+Can you create a global variable inside a function?
+If you make a variable inside a function and you don’t write let, const, or var in front of it, JavaScript will treat it as a global variable, even though it was made inside the function.
+
+
+
+
+
+
+
+
+Chapter 4:
+How can we call each different type of dialog box in JavaScript?
+alert,
+confirm (OK/Cancel)
+prompt (text Input)
+
+What are the different capabilities of each type of dialog box?
+alert - Shows a simple message in an extra window
+confirm - Shows a message with an ok/cancel button
+prompt - gives us the oppurtunity to Input free text and ok/cancel
+
+Name a use case for each of the dialog boy types:
+alert - "Please Input username and password"
+confirm - "Are you sure you want to delete this file?"
+prompt - "Hello " + Name + "!";
+
+
+
+
+
+
+
+
+Chapter 5:
+
+What is the DOM and how does it work?
+The DOM (Document Object Model) is how JavaScript sees the webpage. It turns the HTML into a tree of objects. every tag becomes an object. JavaScript can read, change, or delete these objects.
+
+why is dom important for JavaScript?
+it lets us Change the Website while it's open, like changing text, show or hide elements,reacht when a user clicks a button
+
+Which selectors return ONE result?
+getElementById
+querySelector - gets the first match
+
+Which selectors return multiple results?
+getElementsByTagName("")
+getElementsByName("")
+querySelectorAll("")
+
+What is the .value property used for?
+it gets and sets the value inside a form field
